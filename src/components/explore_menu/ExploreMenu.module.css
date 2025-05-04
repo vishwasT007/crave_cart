@@ -1,0 +1,73 @@
+/* ExploreMenu.module.css */
+.exploreMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px; /* Add some padding around the section */
+}
+
+.exploreMenu h1 {
+  color: black;
+  font-weight: 500;
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.exploreMenuText {
+  max-width: 60%;
+  color: grey;
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 20px; /* Add space below the text */
+}
+
+.exploreMenuList {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto; /* Use 'auto' to show scrollbar only when needed */
+  padding-bottom: 15px; /* Make space for the scrollbar if it appears */
+}
+
+.exploreMenuList::-webkit-scrollbar {
+  display: none; /* Hide the default scrollbar for WebKit browsers */
+}
+
+.exploreMenuListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Define a minimum width for each item to encourage scrolling */
+  min-width: 150px; /* Adjust this value as needed */
+}
+
+.exploreMenuListItem img {
+  max-width: 100%; /* Ensure images don't overflow their container */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.exploreMenuListItem p {
+  color: #333; /* Darker text for menu item names */
+  font-weight: 500;
+}
+
+.exploreMenuListItem img {
+  width: 7.5vw;
+  min-width: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.exploreMenuListItem p {
+  margin-top: 10px;
+  color: gray;
+  font-size: max(1.4vw), 16px;
+  cursor: pointer;
+}
+
+.exploreMenu hr {
+  margin: 10px 0px;
+  height: 2px;
+  background-color: green;
+  border: none;
+}
