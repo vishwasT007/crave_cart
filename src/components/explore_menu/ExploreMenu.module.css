@@ -71,3 +71,8 @@
   background-color: green;
   border: none;
 }
+
+.exploreMenuListItem .active {
+  border: 4px solid lightseagreen;
+  padding: 2px;
+}

@@ -1,7 +1,8 @@
+// ExploreMenu.js
 import styles from "./ExploreMenu.module.css";
 import { menu_list } from "../../assets/frontend_assets/assets";
 
-function ExploreMenu() {
+function ExploreMenu({ category, setCategory }) {
   return (
     <div className={styles.exploreMenu} id="exploreMenu">
       <h1>Explore our Menu</h1>
@@ -14,8 +15,20 @@ function ExploreMenu() {
       <div className={styles.exploreMenuList}>
         {menu_list.map((dish, index) => {
           return (
-            <div className={styles.exploreMenuListItem} key={index}>
-              <img src={dish.menu_image} alt="" />
+            <div
+              onClick={() =>
+                setCategory((previousState) =>
+                  previousState === dish.menu_name ? "All" : dish.menu_name
+                )
+              }
+              className={styles.exploreMenuListItem}
+              key={index}
+            >
+              <img
+                className={category === dish.menu_name ? styles.active : ""}
+                src={dish.menu_image}
+                alt=""
+              />
               <p>{dish.menu_name}</p>
             </div>
           );
