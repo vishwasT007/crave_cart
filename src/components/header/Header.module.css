@@ -47,3 +47,24 @@
   background-color: white;
   border-radius: 50px;
 }
+
+/* Media queries for different screen sizes */
+@media (max-width: 1050px) {
+  .headerContent {
+    max-width: 45%; /* Adjust content width */
+  }
+}
+
+@media (max-width: 750px) {
+  .headerContent {
+    max-width: 65%;
+  }
+
+  .headerContent p {
+    display: none;
+  }
+
+  .headerContent button {
+    padding: 2vw 4vw;
+  }
+}

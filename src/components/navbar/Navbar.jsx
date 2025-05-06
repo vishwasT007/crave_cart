@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 function Navbar() {
   const [trackPage, setTrackPage] = useState("");
 
@@ -11,30 +12,34 @@ function Navbar() {
     <nav className={styles.navbar}>
       <img src={assets.logo} alt="" className={styles.logo} />
       <ul className={styles.navbarMenu}>
-        <li
+        <Link
+          to={"/"}
           className={trackPage === "home" ? styles.active : ""}
           onClick={() => handleActivePage("home")}
         >
           Home
-        </li>
-        <li
+        </Link>
+        <a
+          href="#exploreMenu"
           className={trackPage === "menu" ? styles.active : ""}
           onClick={() => handleActivePage("menu")}
         >
           Menu
-        </li>
-        <li
+        </a>
+        <a
+          href="#appDownload"
           className={trackPage === "mobile-app" ? styles.active : ""}
           onClick={() => handleActivePage("mobile-app")}
         >
           Mobile-App
-        </li>
-        <li
+        </a>
+        <a
+          href="#footer"
           className={trackPage === "contact-us" ? styles.active : ""}
           onClick={() => handleActivePage("contact-us")}
         >
           Contact-Us
-        </li>
+        </a>
       </ul>
 
       <div className={styles.navbarRight}>
